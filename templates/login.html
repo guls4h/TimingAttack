@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f2f2f2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                background-color: white;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 300px;
+            }
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+            label {
+                font-size: 14px;
+                margin-bottom: 8px;
+                color: #555;
+            }
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                font-size: 14px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                border: none;
+                background-color: #4CAF50;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            .message {
+                text-align: center;
+                margin-top: 10px;
+                color: #777;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Login</h2>
+            <form method="POST" action="/login">
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" required><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="message">
+                <p>Enter your password to gain access.</p>
+            </div>
+        </div>
+    </body>
+</html>
