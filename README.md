@@ -4,7 +4,7 @@
 This project demonstrates a **Timing Attack** where an attacker can guess the password of a system by analyzing the response times to different password attempts. The server in this project deliberately introduces a timing vulnerability, where the time to process the password is influenced by the number of correct characters at the beginning of the guess.
 
 ### **Project Components:**
-1. **Flask Application** (`app.py`): A simple Flask server that simulates a vulnerable login system. It compares passwords character by character, introducing delays as each correct character is processed.
+1. **Flask Application** (`server.py`): A simple Flask server that simulates a vulnerable login system. It compares passwords character by character, introducing delays as each correct character is processed.
 2. **Timing Attack Script** (`attack.py`): A Python script that performs the timing attack. The attacker sends multiple password guesses and measures the response time to infer the correct password.
 
 ---
@@ -21,10 +21,10 @@ pip install flask
 
 ### 2. **Running the Flask Application**
 
-Run the Flask application (`app.py`) on your local machine:
+Run the Flask application (`server.py`) on your local machine:
 
 ```bash
-python app.py
+python server.py
 ```
 
 This will start the Flask server on `http://127.0.0.2:5000`. The `/login` route accepts `POST` requests with a `password` field and performs the insecure password check. If the password is correct, the server responds with a success message; otherwise, it returns an error.
